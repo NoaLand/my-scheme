@@ -13,7 +13,6 @@ add_library(SchemeCore
         function/list_family.cpp
         function/s_expression_family.cpp
         stream/token_stream.cpp
-        interpreter/repl/repl.cpp
 )
 
 target_include_directories(SchemeCore PUBLIC ../include)
