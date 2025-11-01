@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "master" ]
 
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
