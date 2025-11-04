@@ -1,3 +1,4 @@
+add_subdirectory(frontend)
 add_subdirectory(interpreter)
 
 add_library(SchemeCore

@@ -59,9 +59,13 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
 
-    - name: Test
+    - name: Run Old Tests
       working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ./tests/SchemeCoreTest --gtest_shuffle
+
+    - name: Run New Tests
+      working-directory: ${{github.workspace}}/build
+      run: ./tests/scheme_repl_test --gtest_shuffle
       

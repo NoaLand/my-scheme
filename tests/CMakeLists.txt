@@ -34,3 +34,15 @@ target_link_libraries(
         gtest_main
         gmock_main
 )
+
+add_executable(
+    scheme_repl_test
+    frontend/input_reader_test.cpp
+)
+target_link_libraries(
+    scheme_repl_test
+    PRIVATE
+    scheme_frontend
+    gtest_main
+    gmock_main
+)
